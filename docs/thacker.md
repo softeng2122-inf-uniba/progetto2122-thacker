@@ -1,5 +1,5 @@
 
-Charles Thacker
+**Charles Thacker**
 
 Chuck Thacker ha lavorato in laboratori di ricerca industriale per oltre quarant'anni sviluppando sistemi informatici innovativi, reti e hardware informatico. Sebbene sia principalmente un architetto hardware, ha anche scritto software per la progettazione assistita da computer e interfacce utente.
 
