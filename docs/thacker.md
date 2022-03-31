@@ -16,3 +16,17 @@ Chuck ha anche guidato lo sviluppo delle reti AN1 e AN2.
 Nel 2010, Chuck ha progettato Beehive, un semplice sistema multiprocessore che funziona su una scheda di sviluppo Xilinx che è molto meno costosa di BEE3.
  L'ultimo progetto di Chuck è AN3, il cui obiettivo è migliorare il networking nei grandi data center.
 
+Premi
+Nel 1994 è stato nominato membro del Associazione per le macchine informatiche.[16]
+
+Nel 1996 è stato nominato Distinguished Alumnus in Computer Science presso la U.C. Berkeley.[17]
+
+Nel 2004 ha vinto il Premio Charles Stark Draper insieme a Alan C. Kay, Butler W. Lampson, e Robert W. Taylor.[18]
+
+Nel 2007 ha vinto il Medaglia IEEE John von Neumann.[12]
+
+Nel 2007 è stato nominato membro del Museo di storia del computer per "lo sviluppo leader di Xerox PARC Alto e per le innovazioni nei sistemi di personal computer collegati in rete e nelle tecnologie di stampa laser".[19]
+
+Nel 2010 è stato nominato dal Associazione per le macchine informatiche come destinatario del 2009 Premio Turing[20][21] in riconoscimento del suo design pionieristico e della realizzazione del Alto, il primo personal computer moderno, e in aggiunta per i suoi contributi al Ethernet e il Tablet.
+
+Thacker ha tenuto un dottorato onorario dal svizzero Istituto federale di tecnologia[12] ed era un Fellow tecnico in Microsoft.[12]
