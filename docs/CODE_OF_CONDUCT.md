@@ -1,53 +1,58 @@
 # CODE OF CONDUCT
 ---
 
-## Team ethics
+Per garantire una collaborazione giusta ed efficace, al fine di portare tale progetto ad una buona conclusione, i membri del team Thacker si impegnano a rispettare le seguenti voci:
 
-I embrace that we are stronger as a cross-functional team, working towards a shared goal;
+### ETICA DEL TEAM
+* Ogni membro è consapevole che siamo più forti in team che individualmente, quindi, nessun membro sarà lasciato solo durante tutta la durata del progetto.
 
-I will share my knowledge and expertise with other developers and help them grow, much like other developers helped me grow;
+* Ogni membro condividerà le proprie conoscenze ed esperienze informatiche, proprio come il resto del team farà con lui, in modo da crescere insieme.
 
-I will treat the people in my team as I would like to be treated by them;
-I will guide others to embrace and adhere to these principles;
+* Ogni membro rispetterà gli altri componenti del team ed il loro tempo di apprendimento. Se questo non accade, il membro del team interessato dovrà creare una situazione di dialogo adeguata per cercare di risolvere il problema con il resto del team nel migliore dei modi.
 
-I embrace that software development is a complex endeavor, requiring frequent and intense communication with my team and stakeholders to clarify both the problem and the solution;
+* Ogni membro del team è consapevole di essere in fase di apprendimento e comprensione e che lo sviluppo del software è uno sforzo complesso che richiede una comunicazione frequente e intensiva con il proprio team e le parti interessate per chiarire sia il problema che la soluzione.
 
-I accept (and will help others accept) that mistakes are inevitable. Instead of trying to avoid mistakes altogether, I will seek to limit their impact and learn from them to avoid similar mistakes in the future;
+* Ogni membro del team farà del suo meglio.
 
-I will continuously improve myself.
+* Ogni membro del team si metterà in gioco senza esitare.
 
-I will do the best I can.
+### PARTECIPAZIONE AL TEAM
+
+* Ogni membro del team cercherà di non essere in ritardo durante i meeting, rendendo trasparente ciò che ha fatto e contribuendo ad una buona collaborazione con il team.
+
+* Ogni membro del team sarà in grado di dare il giusto credito al resto dei componenti, indipendentemente da interessi personali, simpatie o antipatie.
+
+* Ogni membro del team deve chiedere aiuto in caso di necessità e deve esortare gli altri a fare lo stesso.
+
+* Ogni membro sarà disponibile ad aiutare gli altri.
+
+### PEER REVIEWS
+
+* Ogni membro del team sarà professionale e pieno di tatto quando fornirà commenti su issue svolte dagli altri.
+
+* Ogni membro del team sarà aperto a ricevere feedback quando gli altri rivedono il suo lavoro.
+
+### SCRITTURA DEL CODICE
+
+* Ogni membro del team scriverà il codice in base allo stile di programmazione scelto insieme.
+
+* Ogni membro del team scriverà il codice cercando di garantire leggibilità e comprensione, facendo uso dei commenti quando è necessario.
+
+* Ogni membro del team cercherà di mantenere un equilibrio tra tempistiche da rispettare e qualità del codice.
+*** 
+---
+### I membri del team:
+* Ilenia Sasanelli
+
+* Raffaella Ricciardi
+
+* Piersilvio Spicoli
+
+* Francesco Scoglietti
+
+* Giulio Russo
+
+* Maria Grazia Miccoli
 
 
-## Team participation
-
-I will not be late for team meetings.
-
-I will help make the work for a product transparent so that we can make informed decisions about what still needs to be done and in what order;
-
-I will help prioritize work for a product based on the value it has for the business, not on (my) personal preferences, likes or dislikes;
-
-I will ask for help when I’m stuck and motivate others to do the same;
-
-I will ask for help when I need it.
-
-I will provide help when asked.
-
-## Peer reviews
-I will be professional and tactful when providing review comments.
-
-I will be open to receiving feedback when others review my work.
-
-## Writing code
-I will express myself through code.
-
-I will add comments to code only if I have failed to express myself through code.
-
-I will write code that adheres to my team's formatting and style conventions.
-
-I will not submit production code without thorough in-memory unit tests.
-
-I will not submit code that causes any tool to emit a warning.
-
-I will always help to find a balance between the need for urgency and the need for quality.
 
