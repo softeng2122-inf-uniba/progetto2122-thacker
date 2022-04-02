@@ -208,7 +208,7 @@ I passi per ottenere il badge di Coveralls sono i seguenti:
 - tornare sulla pagina "Details" dedicata al vostro repository sul sito di Coveralls (dove avete copiato il token). In uno dei riquadri in alto nella pagina è riportato il badge da aggiungere al README. Fare click sul tasto `EMBED` (vd. figura); 
   ![CoverallsBadge_1](./img/CoverallsBadge_1.png)
 - copiare il codice markdown per la richiesta del badge;
-  ![CoverallsBadge_2](./img/CoverallsBadge_2.png)
+  ![CoverallsBadge_2](./img/CoverallsBadge_2.jpeg)
 - La modifica del file Markdown `README.md`sarà fatta come parte dei task dello *Sprint 0* incollando il codice markdown per la costruzione del badge in cima al `README.md`, accanto al titolo del repository.
 - Alla fine, il file `README.md` dovrà mostrare due badge, simili a quelli riportati nella figura sottostante, con *Wordle* al posto di *scacchi*:
 ![actions+coveralls-badges](./img/actions+coveralls-badges.png)
@@ -218,7 +218,7 @@ I passi per ottenere il badge di Coveralls sono i seguenti:
 Qualora doveste accorgervi che il badge con il coverage non si aggiorna - nonstante le modifiche ai casi di test - potete forzare il refresh aggiungendo `&service=github` al link, come mostrato di seguito:
 
 ```
-[![Coverage Status](https://coveralls.io/repos/github/softeng2122-inf-uniba/base2122/badge.svg?branch=master&t=0yipNR&service=github)](https://coveralls.io/github/softeng2122-inf-uniba/base2122?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/softeng2122-inf-uniba/base2122/badge.svg?branch=master&t=0yipNR&service=github)](https://coveralls.io/github/softeng2122-inf-uniba/progetto2122-thacker?branch=master)
 ```
 
 
