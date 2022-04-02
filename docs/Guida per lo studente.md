@@ -218,7 +218,7 @@ I passi per ottenere il badge di Coveralls sono i seguenti:
 Qualora doveste accorgervi che il badge con il coverage non si aggiorna - nonstante le modifiche ai casi di test - potete forzare il refresh aggiungendo `&service=github` al link, come mostrato di seguito:
 
 ```
-[![Coverage Status](https://coveralls.io/repos/github/softeng2122-inf-uniba/base2122/badge.svg?branch=master&t=0yipNR&service=github)](https://coveralls.io/github/softeng2122-inf-uniba/progetto2122-tha?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/softeng2122-inf-uniba/progetto2122-thacker/badge.svg?branch=master&t=0yipNR&service=github)](https://coveralls.io/github/softeng2122-inf-uniba/progetto2122-thacker?branch=master)
 ```
 
 
