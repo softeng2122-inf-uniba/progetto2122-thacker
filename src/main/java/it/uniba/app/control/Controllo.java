@@ -126,5 +126,40 @@ public boolean controlloParola(String parola) {
  }
 
 
+ public void stampaHelp(){
+        System.out.println("  +------------------------------------------------------------+");
+        System.out.println("  |                       WORDLE - HELP                        |");
+        System.out.println("  +------------------------------------------------------------+");
+        System.out.println("  |/esci --> Con questo comando viene chiuso il gioco          |");
+        System.out.println("  +------------------------------------------------------------+");
+        System.out.println("  |/nuova <parola> --> Con questo comando andremo a            |");
+        System.out.println("  |          inserire una nuova parola segreta                 |");
+        System.out.println("  +------------------------------------------------------------+");
+        System.out.println("  |/gioca--> Con questo comando verrà avvaiata la partita      |");
+        System.out.println("  | e mostrata la matrice dei tentativi vuota e si viene       |");
+        System.out.println("  |preddisposti a ricevere il primo tentativo o altri comandi  |");
+        System.out.println("  +------------------------------------------------------------+");
+        System.out.println("  |/mostra--> Con questo comando l'applicazione risponde       |");   
+        System.out.println("  |mostrando la parola segreta                                 |");
+        System.out.println("  +------------------------------------------------------------+");
+        System.out.println("  |/abbandona --> Con  questo comando l'applicazione chiederà  |");
+        System.out.println("  |una conferma  che se risulterà positiva porterà, l'abbando  |");
+        System.out.println("  |della partita , se risulterà negativa l'applicazione sarà   |");
+        System.out.println("  |predisposta a ricevere un altro tebtativo o altri comandi   |");
+        System.out.println("  +------------------------------------------------------------+");
+        System.out.println("  |/esci --> Con  questo comando se la conferma è postiva l'app|");
+        System.out.println("  | verrà chiusa                                               |");
+        System.out.println("  +------------------------------------------------------------+");
+        System.out.println("  |/indovina --> Con questo comando verranno mostrati 3 tipi di|");
+        System.out.println("  | messaggi                                                   |");
+        System.out.println("  | _ INCOMPLETO :  se i caratteri sono inferiori a quelli     |");
+        System.out.println("  |della parola segreta                                        |");
+        System.out.println("  |_ ECCESSIVO : se  i caratteri sono superiori a quelli dellla|");
+        System.out.println("  |parola segreta                                              |");
+        System.out.println("  | _ NON VALIDO : se i caratteri non corrispondono a lettere  |");
+        System.out.println("  |dell'alfabeto                                               |");
+        System.out.println("  +------------------------------------------------------------+");
+ }
+
 
 }

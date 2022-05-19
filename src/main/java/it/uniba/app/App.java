@@ -75,6 +75,7 @@ public final class App {
 
                     case 3:
                     controllo.stampaHelp();
+
                        
                     break;
 
