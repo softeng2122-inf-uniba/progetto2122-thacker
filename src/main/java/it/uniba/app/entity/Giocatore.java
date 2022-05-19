@@ -52,8 +52,4 @@ public class Giocatore extends Utente {
     public void incrTentativi(){
         nTentativi++;
     }
-
-    
-
-    
 }
