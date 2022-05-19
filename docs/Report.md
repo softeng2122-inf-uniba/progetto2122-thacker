@@ -64,3 +64,18 @@ Dopo aver eseguito il comando docker pull copiandolo da GitHub Packages, Il coma
 
 docker run --rm -it ghcr.io/softeng2122-inf-uniba/wordle-base2122:latest 
 dove base2122 sarà sostitituito con il nome del gruppo. 
+
+# 5. OO Design
+
+Dopo un’attenta analisi dei requisiti funzionali, abbiamo trovato le seguenti classi: 
+
+1) **Comando**: la classe Comando è una classe di tipo Entity e rappresenta caratteristiche e comportamenti che può assumere un comando. Di conseguenza, la responsabilità di questa classe è quella di gestire i comandi inseriti sia dall’utente di tipo giocatore che dall’utente di tipo paroliere. 
+
+2) **Utente**: la classe Utente è una classe di tipo Entity e rappresenta caratteristiche e comportamenti che può assumere un utente generale. La responsabilità di questa classe è quella di gestire l’utente generico e fa da classe padre alle seguenti classi: 
+
+    - **Giocatore**: la classe Giocatore è una classe di tipo Entity e rappresenta caratteristiche e comportamenti che può assumere un utente di tipo giocatore.  
+    La responsabilità di questa classe è quella di gestire il giocatore durante tutta la durata della partita. 
+    - **Paroliere**: la classe Paroliere è una classe di tipo Entity e rappresenta caratteristiche e comportamenti che può assumere un utente di tipo paroliere.  
+    La responsabilità di questa classe è quella di gestire il paroliere durante tutta la durata della partita. 
+
+3) **Controllo**: la classe controllo è una classe di tipo Control e ha la responsabilità di effettuare dei controlli sulle parole che vengono inserite dall’utente di tipo paroliere e dall’utente di tipo giocatore. 
