@@ -80,6 +80,25 @@ public final class App {
                     break;
 
                     case 4:
+                    if(partitaInCorso==false){
+                            matrice=controllo.getMatrice(max_tentativi, max_Lettere);
+                            giocatore.setnTentativi(-1);
+                            
+                            controllo.stampaMatrice(matrice, max_tentativi, max_Lettere);
+                          
+                            checkComando=0;
+                            System.out.println("\n Ora inizia una nuova partita!\n "
+                                    + "Paroliere inserisci una nuova parola con l'apposito comando!\n");
+                            
+                            partitaInCorso=true;
+                            
+                            
+                            
+                        }
+                        else{
+                            System.out.println("E' in corso un'altra partita \n");
+                            checkComando=0;
+                        }
                         
                         
                     break;
