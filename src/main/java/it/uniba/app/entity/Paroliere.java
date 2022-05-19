@@ -1,6 +1,6 @@
 package it.uniba.app.entity;
 
-import control.Controllo;
+import it.uniba.app.control.Controllo;
 
 public class Paroliere extends Utente {
     private String parola_Paroliere;
