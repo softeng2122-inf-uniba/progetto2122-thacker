@@ -1,19 +1,12 @@
 package it.uniba.app;
 
-/**
- * Main class of the application.
- */
 import java.util.Scanner;
-
 import it.uniba.app.control.Controllo;
 import it.uniba.app.entity.Comando;
 import it.uniba.app.entity.Giocatore;
 import it.uniba.app.entity.Paroliere;
 
  
-/**
- * Main class of the application.
- */
 public final class App {
  
     public static void main(String args[]) 
@@ -98,9 +91,7 @@ public final class App {
                         else{
                             System.out.println("E' in corso un'altra partita \n");
                             checkComando=0;
-                        }
-                        
-                        
+                        }   
                     break;
 
                     case 5:
@@ -117,13 +108,10 @@ public final class App {
                         else{
                             checkComando=0;
                         }
-                        
-                    
                     break;
 
                     case 6:
-                    try{
-                           
+                        try{
                             if(controllo.controlloParola(comandoCorrente[1])==false){
                                 
                                 if(paroliere.getParola_Paroliere()!= null){
@@ -153,14 +141,10 @@ public final class App {
                                                     System.out.println("Lettera: " + parola_giocatore[i] + " NON PRESENTE ");
                                                     matrice[giocatore.getnTentativi()][i] = parola_giocatore[i];
                                                 }
-                                            }
-                                            
-                                        }
-                                        
-                                        System.out.println("Tentativi:" + giocatore.getnTentativi());
-                                        
+                                            }                                      
+                                        }                
+                                        System.out.println("Tentativi:" + giocatore.getnTentativi());              
                                         controllo.stampaMatriceColorata(matrice, esiti, max_tentativi, max_Lettere);
-                                      
                                         boolean indovinata=true;
                                         for(int i=0; i<max_Lettere;i++)
                                         {
@@ -175,39 +159,38 @@ public final class App {
                                             System.out.println("PAROLA INDOVINATA!");
                                             
                                         }
-
                                         if(giocatore.getnTentativi()==5){
                                             System.out.println("---------------------------------------------------------");
                                             System.out.println("Tentativi esauriti! La parola segreta e': " + paroliere.getParola_Paroliere());
                                             controllo.stampaMatriceColorata(matrice, esiti, max_tentativi, max_Lettere);
                                             System.out.println("---------------------------------------------------------");
                                         }
-
-                                    }
-                                    
-                                    
-                                   
+                                    }  
                                 }
                                 else
                                 {
                                     System.out.println("Il paroliere non ha inserito la parola da indovinare\n"
                                             + "Può farlo con l'apposito comando\n"); 
                                 }
-                            
                             }
                             else{
                              System.out.println("Reinserire la parola\n"); 
                                 }
                         }catch(ArrayIndexOutOfBoundsException e){
                             System.out.println("Ops! Hai dimenticato di inserire la parola\n");
-                        }
-                       
-                       
-                   
+                        } 
                     break;
 
                     case 7:
-                        
+                        System.out.println("Vuoi chiudere il gioco? SI/NO");
+                        rispostaUtente=in.nextLine();
+                        if(rispostaUtente.compareToIgnoreCase(rispostaUtente)==0){
+                            System.out.println("Arrivederci!");
+                        }
+                        else{
+                            checkComando=0;
+                        }
+                        System.out.println("Chiusura del gioco...");
                     break;
 
                     case 0:
@@ -222,5 +205,4 @@ public final class App {
  
             in.close();
     }
-   
 }

@@ -9,6 +9,7 @@ In questo gioco esistono due ruoli fondamentali, ovvero il paroliere e il giocat
 La realizzazione del gioco è stata suddivisa in 3 sprint diversi. A partire dallo Sprint 0 fino ad arrivare allo Sprint 2. È stato adottato lo sviluppo agile e sono stati seguiti i 12 principi stabiliti dal framework di sviluppo Scrum. Il progetto è stato sviluppato tramite il linguaggio Java con l’aiuto della piattaforma GitHub per la creazione di un repository apposito per il progetto per il corso di Ingegneria del Software.
 
 # 2. Modello di dominio
+![concettuale](./img/concettuale.png)
 # 3. Requisiti specifici
 ### **3.1 Requisiti funzionali**
 Per ogni user story devono essere soddisfatti i seguenti requisiti 
@@ -79,3 +80,19 @@ Dopo un’attenta analisi dei requisiti funzionali, abbiamo trovato le seguenti 
     La responsabilità di questa classe è quella di gestire il paroliere durante tutta la durata della partita. 
 
 3) **Controllo**: la classe controllo è una classe di tipo Control e ha la responsabilità di effettuare dei controlli sulle parole che vengono inserite dall’utente di tipo paroliere e dall’utente di tipo giocatore. 
+
+Diagramma delle classi dal punto di vista software:
+
+![concettuale](./img/strutturale.jpg)
+
+RF1:
+
+![concettuale](./img/RF1.jpg)
+
+RF3:
+
+![concettuale](./img/RF3.jpg)
+
+RF6:
+
+![concettuale](./img/RF6.jpg)
