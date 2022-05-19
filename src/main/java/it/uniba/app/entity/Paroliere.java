@@ -1,65 +1,40 @@
 package it.uniba.app.entity;
 
-public class Utente {
-    private Comando comando;
-    private String username;
-    private int id;
+import control.Controllo;
 
-    public Utente(String username, int id) {
-        this.username = username;
-        this.id = id;
+public class Paroliere extends Utente {
+    private String parola_Paroliere;
+    private Controllo controllo;
+
+    public Paroliere(int id) {
+        super(id);
     }
 
-    public Utente(int id) {
-        this.id = id;
+    public Paroliere(int id, String parola_Paroliere) {
+        super(id);
+        this.parola_Paroliere = parola_Paroliere;
     }
 
-    public String getUsername() {
-        return username;
+    public Paroliere(int id,String parola_Paroliere,String username) {
+        super(username, id);
+        this.parola_Paroliere = parola_Paroliere;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public String getParola_Paroliere() {
+        return parola_Paroliere;
     }
 
-    public int getId() {
-        return id;
+    public Controllo getControllo() {
+        return controllo;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setControllo(Controllo controllo) {
+        this.controllo = controllo;
     }
 
-    public Comando getComando() {
-        return comando;
-    }
+    public void impostaParola(String parola_Paroliere) {
+        this.parola_Paroliere = parola_Paroliere;
+    }         
 
-    public void setComando(Comando comando) {
-        this.comando = comando;
-    }
-
-    @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + id;
-        return result;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj)
-            return true;
-        if (obj == null)
-            return false;
-        if (getClass() != obj.getClass())
-            return false;
-        Utente other = (Utente) obj;
-        if (id != other.id)
-            return false;
-        return true;
-    }
-
-    
-   
 }
+
