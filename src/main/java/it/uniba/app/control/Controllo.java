@@ -147,6 +147,19 @@ public void stampaMatrice(char[][] matrice,int righe,int colonna){
 
         }
  }
+
+ public int[][] getMatriceInt(int righe,int colonne)
+ {
+     int[][] matrice = new int[righe][colonne];
+
+     for(int i=0;i<righe;i++){
+         for(int j=0;j<colonne;j++){
+             matrice[i][j]=-1;
+         }
+     }
+
+     return matrice;
+ }
  
 
 
