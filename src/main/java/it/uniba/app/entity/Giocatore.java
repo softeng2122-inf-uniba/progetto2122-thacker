@@ -1,6 +1,6 @@
 package it.uniba.app.entity;
 
-import control.Controllo;
+import it.uniba.app.control.Controllo;
 
 public class Giocatore extends Utente {
     private int nTentativi;

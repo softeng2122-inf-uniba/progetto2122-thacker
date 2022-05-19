@@ -3,12 +3,12 @@ package it.uniba.app;
 /**
  * Main class of the application.
  */
-import java.util.*;
- 
-import control.Controllo;
-import entity.Comando;
-import entity.Giocatore;
-import entity.Paroliere;
+import java.util.Scanner;
+
+import it.uniba.app.control.Controllo;
+import it.uniba.app.entity.Comando;
+import it.uniba.app.entity.Giocatore;
+import it.uniba.app.entity.Paroliere;
 
  
 /**
@@ -63,6 +63,12 @@ public final class App {
                         break;
  
                     case 2:
+                    if(paroliere.getParola_Paroliere()!= null){
+                        System.out.println("La parola segreta è: " + paroliere.getParola_Paroliere());
+                   }
+                   else{
+                       System.out.print("Non è stata inserita nessuna parola");
+                   }
                        
                        
                     break;
