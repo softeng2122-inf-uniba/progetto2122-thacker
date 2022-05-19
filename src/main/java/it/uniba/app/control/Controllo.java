@@ -160,6 +160,44 @@ public void stampaMatrice(char[][] matrice,int righe,int colonna){
 
      return matrice;
  }
+
+ public void stampaMatriceColorata(char[][]matrice,int[][]esiti,int righe,int colonne){
+       final String ANSI_RESET = "\u001B[40m";
+       final String ANSI_GREEN_BACKGROUND = "\u001B[42m";
+       final String ANSI_YELLOW_BACKGROUND = "\u001B[43m";
+       final String ANSI_WHITE_BACKGROUND = "\u001B[47m";
+       
+       for(int i=0;i<righe;i++){
+           for(int j=0;j<colonne;j++){
+               if(esiti[i][j]==0)
+               {
+                   
+                  System.out.print("\t"+ ANSI_GREEN_BACKGROUND + matrice[i][j] + ANSI_RESET);
+               }
+               else{
+                   if(esiti[i][j]==1)
+                   {
+                       System.out.print("\t"+ ANSI_YELLOW_BACKGROUND + matrice[i][j] + ANSI_RESET);
+                   }
+                   else
+                   {
+                       if(esiti[i][j]==2){
+                           System.out.print("\t"+ ANSI_WHITE_BACKGROUND + matrice[i][j] + ANSI_RESET);
+                       }else
+                       {
+                           System.out.print("\t"+ ANSI_RESET + matrice[i][j] + ANSI_RESET);
+                       }
+
+                   }
+               }
+
+
+           }
+           System.out.println("\n");
+       }
+       
+       
+ }
  
 
 

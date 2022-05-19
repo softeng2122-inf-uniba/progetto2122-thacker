@@ -122,6 +122,85 @@ public final class App {
                     break;
 
                     case 6:
+                    try{
+                           
+                            if(controllo.controlloParola(comandoCorrente[1])==false){
+                                
+                                if(paroliere.getParola_Paroliere()!= null){
+                                    if(giocatore.getnTentativi() != 5){
+                                        char[] parola_paroliere = paroliere.getParola_Paroliere().toCharArray();
+                                        char[] parola_giocatore = comandoCorrente[1].toCharArray();
+                                        giocatore.incrTentativi();
+
+                                        controllo.controllaParola(parola_paroliere, parola_giocatore,esiti,max_tentativi,giocatore.getnTentativi());
+                                        
+                                        for(int i=0;i<max_Lettere;i++)
+                                        {
+                                            if(esiti[giocatore.getnTentativi()][i]==0)
+                                            {
+                                                System.out.println("Lettera: " + parola_giocatore[i] + " presente");
+                                                matrice[giocatore.getnTentativi()][i] = parola_giocatore[i];
+                                            }
+                                            else
+                                            {
+                                                if(esiti[giocatore.getnTentativi()][i]==1)
+                                                {
+                                                    System.out.println("Lettera: " + parola_giocatore[i] + " presente,ma non in posizione giusta");
+                                                    matrice[giocatore.getnTentativi()][i] = parola_giocatore[i];
+                                                }
+                                                else
+                                                {
+                                                    System.out.println("Lettera: " + parola_giocatore[i] + " NON PRESENTE ");
+                                                    matrice[giocatore.getnTentativi()][i] = parola_giocatore[i];
+                                                }
+                                            }
+                                            
+                                        }
+                                        
+                                        System.out.println("Tentativi:" + giocatore.getnTentativi());
+                                        
+                                        controllo.stampaMatriceColorata(matrice, esiti, max_tentativi, max_Lettere);
+                                      
+                                        boolean indovinata=true;
+                                        for(int i=0; i<max_Lettere;i++)
+                                        {
+                                            if(esiti[giocatore.getnTentativi()][i]!=0)
+                                            {
+                                                indovinata=false;
+                                                i=max_Lettere;
+                                            }
+                                        }
+                                        if(indovinata==true)
+                                        {
+                                            System.out.println("PAROLA INDOVINATA!");
+                                            
+                                        }
+
+                                        if(giocatore.getnTentativi()==5){
+                                            System.out.println("---------------------------------------------------------");
+                                            System.out.println("Tentativi esauriti! La parola segreta e': " + paroliere.getParola_Paroliere());
+                                            controllo.stampaMatriceColorata(matrice, esiti, max_tentativi, max_Lettere);
+                                            System.out.println("---------------------------------------------------------");
+                                        }
+
+                                    }
+                                    
+                                    
+                                   
+                                }
+                                else
+                                {
+                                    System.out.println("Il paroliere non ha inserito la parola da indovinare\n"
+                                            + "Può farlo con l'apposito comando\n"); 
+                                }
+                            
+                            }
+                            else{
+                             System.out.println("Reinserire la parola\n"); 
+                                }
+                        }catch(ArrayIndexOutOfBoundsException e){
+                            System.out.println("Ops! Hai dimenticato di inserire la parola\n");
+                        }
                        
                        
                    
