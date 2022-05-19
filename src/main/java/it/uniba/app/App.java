@@ -63,6 +63,12 @@ public final class App {
                         break;
  
                     case 2:
+                    if(paroliere.getParola_Paroliere()!= null){
+                        System.out.println("La parola segreta è: " + paroliere.getParola_Paroliere());
+                   }
+                   else{
+                       System.out.print("Non è stata inserita nessuna parola");
+                   }
                        
                        
                     break;
