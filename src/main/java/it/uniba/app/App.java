@@ -104,6 +104,19 @@ public final class App {
                     break;
 
                     case 5:
+                        System.out.println("Vuoi abbandonare la partita? SI/NO");
+                        rispostaUtente=in.nextLine();
+                        if(rispostaUtente.compareToIgnoreCase(rispostaUtente)==0){
+                            System.out.println("Partita abbandonata. Arrivederci!");
+                            partitaInCorso=false;
+                            esiti=controllo.getMatriceInt(max_tentativi,max_Lettere);
+                            matrice= controllo.getMatrice(max_tentativi,max_Lettere);
+
+
+                        }
+                        else{
+                            checkComando=0;
+                        }
                         
                     
                     break;
