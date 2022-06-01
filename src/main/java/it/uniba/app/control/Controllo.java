@@ -25,13 +25,13 @@ public boolean controlloParola(String parola) {
     boolean esito = false;
     if(parola.length() < max_NLettere){
         esito = true;
-        System.out.println("Parola troppo corta\n");
+        System.out.println("\nTENTATIVO INCOMPLETO\n");
     }else if(parola.length() > max_NLettere) {
         esito = true;
-        System.out.println("Parola troppo lunga\n");
+        System.out.println("\nTENTATIVO ECCESSIVO\n");
     }else if(controlloCaratteri(parola)==true){
         esito=true;
-        System.out.println("Nella parola sono presenti caratteri non validi\n");
+        System.out.println("\nTENTATIVO NON VALIDO\n");
     }
 
     return esito;
