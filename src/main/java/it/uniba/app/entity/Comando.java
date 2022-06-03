@@ -1,35 +1,68 @@
 package it.uniba.app.entity;
-import java.util.*;
-
+import java.util.List;
+import java.util.ArrayList;
 
 public class Comando {
+    /**
+     * nome :  nome comando
+     */
     private String nome;
+    /**
+     * utenti : lista di utenti
+     */
     private List<Utente> utenti = new ArrayList<>();
 
-    public Comando(){
-        nome="";
-    }
-    
-    public Comando(String nome){
-        this.nome=nome;
-    }
-
-    public String getNome() {
-        return nome;
+    /**
+     * costruttore della classe
+     */
+    public Comando() {
+        nome = "";
     }
 
-    public void setNome(String nome) {
+    /**
+     *
+     * @param nome : nome del comando
+     */
+    public Comando(final String nome) {
         this.nome = nome;
     }
 
-    public List<Utente> getUtenti() {
+    /**
+     *
+     * @return : restituisce il nome del comando
+     */
+    public final String getNome() {
+        return nome;
+    }
+
+    /**
+     *
+     * @param nome :nome del comando
+     */
+    public final void setNome(final String nome) {
+        this.nome = nome;
+    }
+
+    /**
+     *
+     * @return : restituisce la lista di utenti
+     */
+    public final List<Utente> getUtenti() {
         return utenti;
     }
 
-    public void setUtenti(List<Utente> utenti) {
+    /**
+     *
+     * @param utenti : lista utenti
+     */
+    public final void setUtenti(final List<Utente> utenti) {
         this.utenti = utenti;
     }
 
+    /**
+     * @param comando : comando da controllare
+     * @return :il codice identificativo del comando
+     */
     public final int controllaComando(final String comando) {
         int esito = 0;
         char[] controlloComando = comando.toCharArray();
@@ -38,26 +71,21 @@ public class Comando {
             case "/nuova":
                 esito = 1;
             break;
-
             case "/mostra":
                 esito = 2;
             break;
-
             case "/help":
                 esito = 3;
             break;
-
             case "/gioca":
                 esito = 4;
             break; 
             case "/abbandona":
                 esito = 5;
             break;
-
             case "/esci":
                 esito = 7;
             break;
-
             default:
             esito = -1;
             break;
