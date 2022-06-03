@@ -3,38 +3,73 @@ package it.uniba.app.entity;
 import it.uniba.app.control.Controllo;
 
 public class Paroliere extends Utente {
+    /**
+     * parola_Paroliere : parola da indovinare
+     */
     private String parola_Paroliere;
+    /**
+     * oggetto controllo
+     */
     private Controllo controllo;
 
-    public Paroliere(int id) {
+    /**
+     *
+     * @param id : id del paroliere
+     */
+    public Paroliere(final int id) {
         super(id);
     }
 
-    public Paroliere(int id, String parola_Paroliere) {
+    /**
+     *
+     * @param id : id del paroliere
+     * @param parola_Paroliere : parola segreta da indovinare
+     */
+    public Paroliere(final int id, final String parola_Paroliere) {
         super(id);
         this.parola_Paroliere = parola_Paroliere;
     }
 
-    public Paroliere(int id,String parola_Paroliere,String username) {
+    /**
+     *
+     * @param id : id  del paroliere
+     * @param parola_Paroliere : parola segreta da indovinare
+     * @param username : username del paroliere
+     */
+    public Paroliere(final int id, final String parola_Paroliere, final String username) {
         super(username, id);
         this.parola_Paroliere = parola_Paroliere;
     }
 
-    public String getParola_Paroliere() {
+    /**
+     *
+     * @return : parola del paroliere
+     */
+    public final String getParola_Paroliere() {
         return parola_Paroliere;
     }
 
-    public Controllo getControllo() {
+    /**
+     *
+     * @return : oggetto controllo
+     */
+    public final Controllo getControllo() {
         return controllo;
     }
 
-    public void setControllo(Controllo controllo) {
+    /**
+     *
+     * @param controllo :  oggetto controllo
+     */
+    public final void setControllo(final Controllo controllo) {
         this.controllo = controllo;
     }
 
-    public void impostaParola(String parola_Paroliere) {
+    /**
+     *
+     * @param parola_Paroliere : parola segreta inserita dal paroliere
+     */
+    public final void impostaParola(final String parola_Paroliere) {
         this.parola_Paroliere = parola_Paroliere;
-    }         
-
+    }
 }
-
