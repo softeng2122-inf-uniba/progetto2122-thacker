@@ -8,61 +8,55 @@ import it.uniba.app.entity.Paroliere;
 
 
 public final class App {
- 
-    public static void main(String args[]) 
-    {   
-            
-            Scanner in = new Scanner(System.in);
-            int max_Lettere = 5;
-            int max_tentativi = 6;
 
- 
+    //not call
+    private App() { }
+
+    /**
+     *
+     * @param args
+     */
+    public static void main(final String[] args) {
+            Scanner in = new Scanner(System.in);
+            final int max_Lettere = 5;
+            final int max_tentativi = 6;
+            final int max_Tent = 5;
             Paroliere paroliere = new Paroliere(0);
             Giocatore giocatore = new Giocatore(0);
             Comando comando = new Comando();
             Controllo controllo = new Controllo(max_Lettere);
- 
-            char[][] matrice = controllo.getMatrice(max_tentativi,max_Lettere);
-            int[][] esiti = controllo.getMatriceInt(max_tentativi,max_Lettere);
+            char[][] matrice = controllo.getMatrice(max_tentativi, max_Lettere);
+            int[][] esiti = controllo.getMatriceInt(max_tentativi, max_Lettere);
             String comandoUtente;
-            String comandoCorrente[] = new String[2];
+            String[] comandoCorrente = new String[2];
             String rispostaUtente;
             boolean partitaInCorso = false; // non è in corso
-            int checkComando=0;
+            int checkComando = 0;
 
             System.out.println("\n\nBENVENUTI IN WORDLE!");
-           
-            while(checkComando!=7)
-            {
+            while (checkComando != 7) {
                 System.out.println("Inserisci comando...\n");
                 comandoUtente = in.nextLine();
                 comandoCorrente = comandoUtente.split(" ");
                 checkComando = comando.controllaComando(comandoCorrente[0]);
-                                
                 switch (checkComando) {
                     case 1:
-                        try{
-                            if(controllo.controlloParola(comandoCorrente[1])==false){
+                        try {
+                            if (controllo.controlloParola(comandoCorrente[1]) == false) {
                             paroliere.impostaParola(comandoCorrente[1]);
-                            
-                            }
-                            else{
+                            } else {
                              System.out.println("Reinserire la parola\n"); 
                                 }
-                        }catch(ArrayIndexOutOfBoundsException e){
+                        } catch (ArrayIndexOutOfBoundsException e) {
                             System.out.println("Ops! Hai dimenticato di inserire la parola\n");
                         }
-                   
                         break;
- 
                     case 2:
-                        if(paroliere.getParola_Paroliere()!= null){
+                        if (paroliere.getParola_Paroliere() != null) {
                              System.out.println("La parola segreta è: " + paroliere.getParola_Paroliere());
-                        }
-                        else{
+                        } else  {
                             System.out.print("Non è stata inserita nessuna parola");
                         }
-                       
                     break;
 
                     case 3:
@@ -70,38 +64,25 @@ public final class App {
                     break;
 
                     case 4:
-                        if(partitaInCorso==false){
-                            matrice=controllo.getMatrice(max_tentativi, max_Lettere);
-                            giocatore.setnTentativi(-1);
-                            
-                            controllo.stampaMatrice(matrice, max_tentativi, max_Lettere);
-                          
-                            checkComando=0;
-                            System.out.println("\n Ora inizia una nuova partita!\n ");
+                    if (partitaInCorso == false) {
+                        matrice = controllo.getMatrice(max_tentativi, max_Lettere);
+                        giocatore.setnTentativi(-1);
 
-                            if(paroliere.getParola_Paroliere()==null)
-                            {
-                                if(controllo.controlloParola(comandoCorrente[1])==false){
-                                    paroliere.impostaParola(comandoCorrente[1]);
-                                }
-                                else{
-                                    System.out.println("Reinserire la parola\n");
-                                }
+                        controllo.stampaMatrice(matrice, max_tentativi, max_Lettere);
 
-                            }
-                            
-                            partitaInCorso=true;
-                        }
-                        else
-                        {
-                            System.out.println("E' in corso un'altra partita \n");
-                            checkComando=0;
-                        }
-                        
+                        checkComando = 0;
+                        System.out.println("\n Ora inizia una nuova partita!\n "
+                                + "Paroliere inserisci una nuova parola con l'apposito comando!\n");
+
+                        partitaInCorso = true;
+                    } else {
+                        System.out.println("E' in corso un'altra partita \n");
+                        checkComando = 0;
+                    }
                     break;
                     case 5:
-                    System.out.println("Vuoi abbandonare la partita? SI/NO");
-                    rispostaUtente = in.nextLine();
+                        System.out.println("Vuoi abbandonare la partita? SI/NO");
+                        rispostaUtente = in.nextLine();
                         if (rispostaUtente.compareToIgnoreCase("SI") == 0) {
                             System.out.println("Partita abbandonata!");
                             partitaInCorso = false;
@@ -110,10 +91,8 @@ public final class App {
                             paroliere.impostaParola("");
                         } else {
                             checkComando = 0;
-                    }
-                    
+                        }
                     break;
-
                     case 6:
                        try {
                             if (controllo.controlloParola(comandoCorrente[0]) == false) {
@@ -186,37 +165,23 @@ public final class App {
                         }
                     break;
 
-
                     case 7:
-                    System.out.println("Vuoi chiudere il gioco? SI/NO");
-                    rispostaUtente = in.nextLine();
+                         System.out.println("Vuoi chiudere il gioco? SI/NO");
+                            rispostaUtente = in.nextLine();
                         if (rispostaUtente.compareToIgnoreCase("SI") == 0) {
                             System.out.println("Arrivederci!");
                             System.out.println("Chiusura del gioco...");
-                        }
-                        else {
+                        } else {
                             checkComando = 0;
                         }
+
                     break;
 
-                    case 0:
-                    break;
-                
-                    default:
-                        System.out.println("Comando non valido");
+                    case 0: break;
+                    default: System.out.println("Comando non valido");
                     break;
                 }
- 
-            }   
- 
+            }
             in.close();
     }
-
 }
-
-
-
-
-   
-    
-    
