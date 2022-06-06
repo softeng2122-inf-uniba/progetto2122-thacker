@@ -4,16 +4,16 @@ import it.uniba.app.control.Controllo;
 
 public class Paroliere extends Utente {
     /**
-     * parola_Paroliere : parola da indovinare
+     * parola_Paroliere : parola da indovinare.
      */
     private String parola_Paroliere;
     /**
-     * oggetto controllo
+     * oggetto controllo.
      */
     private Controllo controllo;
 
     /**
-     *
+     * costruttore.
      * @param id : id del paroliere
      */
     public Paroliere(final int id) {
@@ -21,28 +21,31 @@ public class Paroliere extends Utente {
     }
 
     /**
-     *
+     * costruttore.
      * @param id : id del paroliere
-     * @param parola_Paroliere : parola segreta da indovinare
+     * @param par_Paroliere : parola segreta da indovinare
      */
-    public Paroliere(final int id, final String parola_Paroliere) {
+    public Paroliere(final int id, final String par_Paroliere) {
         super(id);
-        this.parola_Paroliere = parola_Paroliere;
+        this.parola_Paroliere = par_Paroliere;
     }
 
     /**
-     *
+     * costruttore.
      * @param id : id  del paroliere
-     * @param parola_Paroliere : parola segreta da indovinare
+     * @param par_Paroliere : parola segreta da indovinare
      * @param username : username del paroliere
      */
-    public Paroliere(final int id, final String parola_Paroliere, final String username) {
+    public Paroliere(final int id,
+                     final String par_Paroliere,
+                     final String username) {
         super(username, id);
-        this.parola_Paroliere = parola_Paroliere;
+        this.parola_Paroliere = par_Paroliere;
     }
 
     /**
-     *
+     * restituisce la parola.
+     * del paroliere.
      * @return : parola del paroliere
      */
     public final String getParola_Paroliere() {
@@ -50,7 +53,8 @@ public class Paroliere extends Utente {
     }
 
     /**
-     *
+     * restituisce l'oggetto.
+     * controllo.
      * @return : oggetto controllo
      */
     public final Controllo getControllo() {
@@ -58,18 +62,21 @@ public class Paroliere extends Utente {
     }
 
     /**
-     *
-     * @param controllo :  oggetto controllo
+     * imposta l'oggetto
+     * controllo.
+     * @param control :  oggetto controllo
      */
-    public final void setControllo(final Controllo controllo) {
-        this.controllo = controllo;
+    public final void setControllo(final Controllo control) {
+        this.controllo = control;
     }
 
     /**
-     *
-     * @param parola_Paroliere : parola segreta inserita dal paroliere
+     * imposta la
+     * parola del
+     * paroliere.
+     * @param par_Paroliere : parola segreta inserita dal paroliere
      */
-    public final void impostaParola(final String parola_Paroliere) {
-        this.parola_Paroliere = parola_Paroliere;
+    public final void impostaParola(final String par_Paroliere) {
+        this.parola_Paroliere = par_Paroliere;
     }
 }
