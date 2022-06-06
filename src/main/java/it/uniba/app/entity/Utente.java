@@ -1,39 +1,41 @@
 package it.uniba.app.entity;
 
-public class Utente {
+public class Utente implements Cloneable {
     /**
-     * comando: Oggetto comando
-     */
-    private Comando comando;
-    /**
-     * username: username utente
+     * username: username utente.
      */
     private String username;
     /**
-     * id: id utente
+     * id: id utente.
      */
     private int id;
 
     /**
-     *
-     * @param username : username dell'utente
-     * @param id : id dell'utente
+     * costruttore.
+     * @param user_name : username dell'utente
+     * @param idUser : id dell'utente
      */
-    public Utente(final String username, final int id) {
-        this.username = username;
-        this.id = id;
+    public Utente(final String user_name, final int idUser) {
+        this.username = user_name;
+        this.id = idUser;
     }
 
     /**
-     *
-     * @param id : id dell'utente
+     * costruttore vuoto.
      */
-    public Utente(final int id) {
-        this.id = id;
+    public Utente() { };
+
+    /**
+     * costruttore.
+     * @param idUser : id dell'utente
+     */
+    public Utente(final int idUser) {
+        this.id = idUser;
     }
 
     /**
-     *
+     * restituisce
+     * l'username.
      * @return : restituisce  l'username dell'utente
      */
     public final String getUsername() {
@@ -41,15 +43,16 @@ public class Utente {
     }
 
     /**
-     *
-     * @param username : username dell'utente
+     * imposta l'username.
+     * @param user_name : username dell'utente
      */
-    public final void setUsername(final String username) {
-        this.username = username;
+    public final void setUsername(final String user_name) {
+        this.username = user_name;
     }
 
     /**
-     *
+     * restituisce
+     * l'id.
      * @return restituisce l'id
      */
     public final int getId() {
@@ -57,27 +60,11 @@ public class Utente {
     }
 
     /**
-     *
-     * @param id : id dell'utente
+     * imposta l'id.
+     * @param idUser : id dell'utente
      */
-    public final void setId(final int id) {
-        this.id = id;
-    }
-
-    /**
-     *
-     * @return oggetto comando
-     */
-    public final Comando getComando() {
-        return comando;
-    }
-
-    /**
-     *
-     * @param comando : oggetto comando
-     */
-    public final void setComando(final Comando comando) {
-        this.comando = comando;
+    public final void setId(final int idUser) {
+        this.id = idUser;
     }
 
     @Override
@@ -91,14 +78,22 @@ public class Utente {
     @Override
     public final boolean equals(final Object obj) {
         if (this == obj) {
-            return true; }
+            return true;
+        }
         if (obj == null) {
-            return false; }
+            return false;
+        }
         if (getClass() != obj.getClass()) {
-            return false; }
+            return false;
+        }
         Utente other = (Utente) obj;
         if (id != other.id) {
-            return false; }
+            return false;
+        }
         return true;
+    }
+    @Override
+    public final Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 }
