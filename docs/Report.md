@@ -96,3 +96,26 @@ RF3:
 RF6:
 
 ![concettuale](./img/RF6.jpg)
+
+Come notato dai diagrammi precedentemente presentati, il progetto è stato realizzato seguendo i principi generali della progettazione Object-Oriented.
+1. **Information Hiding e basso accoppiamento**:  
+Per le classi da noi rappresentate nel progetto, tutti gli attributi risultano in visibilità "*private*" e per garantire il loro incapsulamento, sono state creati dei metodi getter e setter *publici*. Inoltre, abbiamo suddiviso il nostro sistema in due *package* per garantire al meglio le importazioni dei moduli necessari per l'esecuzione del progetto. Questi pacchetti sono:  
+    * *entity*: contiene tutte le classi del modello di dominio.
+    * *control*: contiene la classe Controllo per gestire il gioco.  
+  
+2. **Alta Coesione**:
+Per garantire un'alta coesione di ogni componente all'interno del sistema, abbiamo definito in modo univoco le responsabilità di ogni classe dal modello di dominio individuato, in modo tale da garantire modularità e alta dipendenza tra le classi.
+3. **Presentazione separata**: 
+La realizzazione dell'interfaccia grafica è stata fatta in riga di comando ed è totalmente indipendente dai package *entity* e *control*. Tale scelta è stata presa per poter scrivere i casi di test attraverso le asserzioni testuali. 
+4. **DRY**: Ogni parte significativa del classi coinvolte nel progetto sono state implementate in modo autonomo senza dover essere ricopiate in altri punti del sorgente.
+5. **Principi SOLID**:
+    *  **Single Responsibility Principle**:
+        * Ogni classe creata ha una singola responsabilità all'interno del nostro progetto.
+    *  **Open/Closed Principle**:
+        * Le classi create possono essere estese o chiuse secondo le necessità.
+    *  **Liskov Substitution Principle**:
+        * Le classi *Giocatore* e *Paroliere* vengono estese dalla classe *Utente* e possono essere utilizzate come *Utente* anche da altre classi.
+    * **Interface Segregation Principle**:
+        * Non sono presenti pattern progettuali che utilizzano le interfacce.
+    * **Dependency Inversion Principle**:
+        * Tale principio viene rispsettato, in quanto la classe *Utente* non dipende dalle sue sottoclassi, ossia *Giocatore* e *Paroliere*, ma il viceversa.
