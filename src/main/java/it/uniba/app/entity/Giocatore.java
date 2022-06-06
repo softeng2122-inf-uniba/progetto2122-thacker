@@ -4,20 +4,20 @@ import it.uniba.app.control.Controllo;
 
 public class Giocatore extends Utente {
     /**
-     * nTentativi : numero di tentativi massimp affidati al giocatore
+     * nTentativi : numero di tentativi massimp affidati al giocatore.
      */
     private int nTentativi;
     /**
-     * parola_Giocatore : parola inserita dall'utente
+     * parola_Giocatore : parola inserita dall'utente.
      */
     private String parola_Giocatore;
     /**
-     * controllo : oggetto controllo
+     * controllo : oggetto controllo.
      */
     private Controllo controllo;
 
     /**
-     *
+     * costruttore.
      * @param id :id dell'utente
      */
     public Giocatore(final int id) {
@@ -26,48 +26,64 @@ public class Giocatore extends Utente {
     }
 
     /**
-     *
+     * costruttore.
      * @param username : usermname dell'utente
      * @param id : id dell'utente
-     * @param nTentativi : numero di tentativi massimo del giocatore
-     * @param parola_Giocatore : parola inserita dal giocatore
+     * @param nTent : numero di tentativi massimo del giocatore
+     * @param par_Giocatore : parola inserita dal giocatore
      */
-    public Giocatore(final String username, final int id, final int nTentativi,  final String parola_Giocatore) {
+    public Giocatore(final String username,
+                     final int id,
+                     final int nTent,
+                     final String par_Giocatore) {
         super(username, id);
-        this.nTentativi = nTentativi;
-        this.parola_Giocatore = parola_Giocatore;
+        this.nTentativi =
+                nTent;
+        this.parola_Giocatore =
+                par_Giocatore;
     }
 
     /**
-     *
+     * costruttore.
      * @param id : id dell'utente
-     * @param nTentativi : numero dei tentativi massimo concesso al''utente
-     * @param parola_Giocatore : parola inserita dal giocatore
+     * @param nTent : numero
+     *                   dei tentativi massimo
+     *                   concesso al''utente
+     * @param par_Giocatore : parola
+     *                         inserita dal giocatore
      */
-    public Giocatore(final int id, final int nTentativi, final String parola_Giocatore) {
+    public Giocatore(final int id,
+                     final int nTent,
+                     final String par_Giocatore) {
         super(id);
-        this.nTentativi = nTentativi;
-        this.parola_Giocatore = parola_Giocatore;
+        this.nTentativi =
+                nTent;
+        this.parola_Giocatore =
+                par_Giocatore;
     }
 
     /**
-     *
-     * @return : ritorna il numero di tentativi
+     * restituisce il
+     * numero di tentativi.
+     * @return : ritorna il
+     * numero di tentativi
      */
     public final int getnTentativi() {
         return nTentativi;
     }
 
     /**
-     *
-     * @param nTentativi : ritorna il numero di tentativi
+     * imposta il numero
+     * di tentativi.
+     * @param nTent : numero di tentativi
      */
-    public final void setnTentativi(final int nTentativi) {
-        this.nTentativi = nTentativi;
+    public final void setnTentativi(final int nTent) {
+        this.nTentativi = nTent;
     }
 
     /**
-     *
+     * restituisce la
+     * parola del giocatore.
      * @return : la parola del giocatore
      */
     public final String getParola_Giocatore() {
@@ -75,15 +91,19 @@ public class Giocatore extends Utente {
     }
 
     /**
-     *
-     * @param parola_Giocatore : la parola del giocatore
+     * imposta la parola del
+     * giocatore.
+     * @param par_Giocatore :
+     *                        la parola del giocatore
      */
-    public final void setParola_Giocatore(final String parola_Giocatore) {
-        this.parola_Giocatore = parola_Giocatore;
+    public final void setParola_Giocatore(
+            final String par_Giocatore) {
+        this.parola_Giocatore = par_Giocatore;
     }
 
     /**
-     *
+     * restituisce l'oggetto
+     * controllo.
      * @return : oggetto di tipo controllo
      */
     public final Controllo getControllo() {
@@ -91,15 +111,17 @@ public class Giocatore extends Utente {
     }
 
     /**
-     *
-     * @param controllo : oggetto controllo
+     * imposta l'oggetto
+     * controllo.
+     * @param control : oggetto controllo
      */
-    public final void setControllo(final Controllo controllo) {
-        this.controllo = controllo;
+    public final void setControllo(
+            final Controllo control) {
+        this.controllo = control;
     }
 
     /**
-     * incrementa il numero di tentativi
+     * incrementa il numero di tentativi.
      */
     public final void incrTentativi() {
         nTentativi++;
