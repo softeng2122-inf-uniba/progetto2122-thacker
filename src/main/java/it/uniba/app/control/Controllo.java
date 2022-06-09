@@ -11,15 +11,15 @@ public class Controllo {
      * massimo numero di lettere.
      *
      */
-   private final int max_NLettere;
+   private final int maxNLettere;
 
     /**
      * Costruttore.
-     * @param max_Lettere :numero massimo di lettere presenti nella parola.
+     * @param maxLettere :numero massimo di lettere presenti nella parola.
      *
      */
-    public Controllo(final int max_Lettere) {
-        this.max_NLettere = max_Lettere;
+    public Controllo(final int maxLettere) {
+        this.maxNLettere = maxLettere;
     }
 
     /**
@@ -28,8 +28,8 @@ public class Controllo {
      * @return :restituisce il numero
      * massimo di lettere di cui è composta la parola
      */
-    public final int getMax_NLettere() {
-        return max_NLettere;
+    public final int getMaxNLettere() {
+        return maxNLettere;
     }
 
     /**
@@ -42,14 +42,13 @@ public class Controllo {
      */
     public  final boolean controlloParola(final String parola)  {
     boolean esito = false;
-    if (parola.length() < max_NLettere) {
+    if (parola.length() < maxNLettere) {
         esito = true;
         System.out.println("\nTENTATIVO INCOMPLETO\n");
-    } else if (parola.length() > max_NLettere) {
+    } else if (parola.length() > maxNLettere) {
         esito = true;
         System.out.println("\nTENTATIVO ECCESSIVO\n");
-    } else if (controlloCaratteri(parola)
-            == true) {
+    } else if (controlloCaratteri(parola)) {
         esito = true;
         System.out.println("\nTENTATIVO NON VALIDO\n");
     }
@@ -75,20 +74,20 @@ public class Controllo {
      *  controlla la presenza
      *  di una lettera
      *  all'interno della parola.
-     * @param parola_paroliere :contiene
+     * @param parolaParoliere :contiene
      *                         la parola da indovinare
      * @param lettera :  lettera
      *                da  individuare all'interno della parola segreta
      * @return : true se
      * la lettera è stata trovata ,altrimenti false
      */
- public final boolean controlloLettere(final char[]parola_paroliere,
+ public final boolean controlloLettere(final char[]parolaParoliere,
                                        final char lettera) {
      boolean trovata = false;
      int i = 0;
-     while (trovata != true
-             && i < parola_paroliere.length) {
-         if (parola_paroliere[i] == lettera) {
+     while (!trovata
+             && i < parolaParoliere.length) {
+         if (parolaParoliere[i] == lettera) {
             trovata = true;
          }
          i++;
@@ -101,29 +100,29 @@ public class Controllo {
      * del giocatore
      * con la parola del
      * paroliere.
-     * @param parola_paroliere :parola segreta da indovinare
-     * @param parola_giocatore : parola inserita dal giocatore
+     * @param parolaParoliere :parola segreta da indovinare
+     * @param parolaGiocatore : parola inserita dal giocatore
      * @param esiti : matrice che indica la
      *              correttezza  o l'assenza
      *              delle lettere all'interno della parola
-     * @param max_tentativi : numero di
+     * @param maxTentativi : numero di
      *                      tentativi massimo che il giocatore
      *                      ha per indovinare la parola segreta
      * @param nTentativo : indica il
      *                   numero di tentativo corrente
      */
- public final void controllaParola(final char[] parola_paroliere,
-                                   final char[]parola_giocatore,
+ public final void controllaParola(final char[] parolaParoliere,
+                                   final char[]parolaGiocatore,
                                    final int[][] esiti,
-                                   final int max_tentativi,
+                                   final int maxTentativi,
                                    final int nTentativo) {
-     for (int i = 0; i < parola_giocatore.length; i++) {
-         if (parola_giocatore[i]
-                 == parola_paroliere[i]) {
+     for (int i = 0; i < parolaGiocatore.length; i++) {
+         if (parolaGiocatore[i]
+                 == parolaParoliere[i]) {
              esiti[nTentativo][i] = 0;
          } else {
-           if (controlloLettere(parola_paroliere,
-                   parola_giocatore[i]) == true) {
+           if (controlloLettere(parolaParoliere,
+                   parolaGiocatore[i])) {
               esiti[nTentativo][i] = 1;
           } else {
               esiti[nTentativo][i] = 2;
@@ -273,38 +272,38 @@ public class Controllo {
                                          final int[][]esiti,
                                          final int righe,
                                          final int colonne) {
-       final String ANSI_RESET =
+       final String ansiRESET =
                "\u001B[40m";
-       final String ANSI_GREEN_BACKGROUND =
+       final String ansiGREENBACKGROUND =
                "\u001B[42m";
-       final String ANSI_YELLOW_BACKGROUND =
+       final String ansiYELLOWBACKGROUND =
                "\u001B[43m";
-       final String ANSI_WHITE_BACKGROUND =
+       final String ansiWHITEBACKGROUND =
                "\u001B[47m";
        for (int i = 0; i < righe; i++) {
            for (int j = 0; j < colonne; j++) {
                if (esiti[i][j] == 0) {
                   System.out.print("\t"
-                          + ANSI_GREEN_BACKGROUND
+                          + ansiGREENBACKGROUND
                           + matrice[i][j]
-                          + ANSI_RESET);
+                          + ansiRESET);
                } else {
                 if (esiti[i][j] == 1) {
                        System.out.print("\t"
-                               + ANSI_YELLOW_BACKGROUND
+                               + ansiYELLOWBACKGROUND
                                + matrice[i][j]
-                               + ANSI_RESET);
+                               + ansiRESET);
                    } else {
                        if (esiti[i][j] == 2) {
                            System.out.print("\t"
-                                   + ANSI_WHITE_BACKGROUND
+                                   + ansiWHITEBACKGROUND
                                    + matrice[i][j]
-                                   + ANSI_RESET);
+                                   + ansiRESET);
                        } else {
                            System.out.print("\t"
-                                   + ANSI_RESET
+                                   + ansiRESET
                                    + matrice[i][j]
-                                   + ANSI_RESET);
+                                   + ansiRESET);
                        }
                 }
                }
