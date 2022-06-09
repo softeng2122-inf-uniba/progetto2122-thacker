@@ -10,7 +10,7 @@ public class Giocatore extends Utente {
     /**
      * parola_Giocatore : parola inserita dall'utente.
      */
-    private String parola_Giocatore;
+    private String parolaGiocatore;
     /**
      * controllo : oggetto controllo.
      */
@@ -30,17 +30,17 @@ public class Giocatore extends Utente {
      * @param username : usermname dell'utente
      * @param id : id dell'utente
      * @param nTent : numero di tentativi massimo del giocatore
-     * @param par_Giocatore : parola inserita dal giocatore
+     * @param parGiocatore : parola inserita dal giocatore
      */
     public Giocatore(final String username,
                      final int id,
                      final int nTent,
-                     final String par_Giocatore) {
+                     final String parGiocatore) {
         super(username, id);
         this.nTentativi =
                 nTent;
-        this.parola_Giocatore =
-                par_Giocatore;
+        this.parolaGiocatore =
+                parGiocatore;
     }
 
     /**
@@ -49,17 +49,17 @@ public class Giocatore extends Utente {
      * @param nTent : numero
      *                   dei tentativi massimo
      *                   concesso al''utente
-     * @param par_Giocatore : parola
+     * @param parGiocatore : parola
      *                         inserita dal giocatore
      */
     public Giocatore(final int id,
                      final int nTent,
-                     final String par_Giocatore) {
+                     final String parGiocatore) {
         super(id);
         this.nTentativi =
                 nTent;
-        this.parola_Giocatore =
-                par_Giocatore;
+        this.parolaGiocatore =
+                parGiocatore;
     }
 
     /**
@@ -86,19 +86,19 @@ public class Giocatore extends Utente {
      * parola del giocatore.
      * @return : la parola del giocatore
      */
-    public final String getParola_Giocatore() {
-        return parola_Giocatore;
+    public final String getParolaGiocatore() {
+        return parolaGiocatore;
     }
 
     /**
      * imposta la parola del
      * giocatore.
-     * @param par_Giocatore :
+     * @param parGiocatore :
      *                        la parola del giocatore
      */
-    public final void setParola_Giocatore(
-            final String par_Giocatore) {
-        this.parola_Giocatore = par_Giocatore;
+    public final void setParolaGiocatore(
+            final String parGiocatore) {
+        this.parolaGiocatore = parGiocatore;
     }
 
     /**
