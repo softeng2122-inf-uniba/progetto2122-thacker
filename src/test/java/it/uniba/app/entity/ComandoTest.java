@@ -1,4 +1,4 @@
-package test.java.it.uniba.app.entity;
+package it.uniba.app.entity;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
