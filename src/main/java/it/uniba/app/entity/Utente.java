@@ -12,11 +12,11 @@ public class Utente implements Cloneable {
 
     /**
      * costruttore.
-     * @param user_name : username dell'utente
+     * @param userName : username dell'utente
      * @param idUser : id dell'utente
      */
-    public Utente(final String user_name, final int idUser) {
-        this.username = user_name;
+    public Utente(final String userName, final int idUser) {
+        this.username = userName;
         this.id = idUser;
     }
 
@@ -44,10 +44,10 @@ public class Utente implements Cloneable {
 
     /**
      * imposta l'username.
-     * @param user_name : username dell'utente
+     * @param userName : username dell'utente
      */
-    public final void setUsername(final String user_name) {
-        this.username = user_name;
+    public final void setUsername(final String userName) {
+        this.username = userName;
     }
 
     /**

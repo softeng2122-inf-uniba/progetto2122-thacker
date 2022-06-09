@@ -13,43 +13,43 @@ public class Comando implements Cloneable {
      * idNuova : codice univoco
      * per il comando /nuova.
      */
-    private static final int idNuova = 1;
+    private static final int IDNUOVA = 1;
     /**
      * idMostra : codice univoco
      * per il comando /mostra.
      */
-    private static final int idMostra = 2;
+    private static final int IDMOSTRA = 2;
     /**
      * idHelp : codice univoco
      * per il comando /help.
      */
-    private static final int idHelp = 3;
+    private static final int IDHELP = 3;
     /**
      * idGioca : codice univoco
      * per il comando /gioca.
      */
-    private static final int idGioca = 4;
+    private static final int IDGIOCA = 4;
     /**
      * idAbbandona : codice univoco
      * per il comando /abbandona.
      */
-    private static final int idAbbandona = 5;
+    private static final int IDABBANDONA = 5;
     /**
      * indovina : codice univoco
      * per fare un tentativo.
      */
-    private static final int tenta = 6;
+    private static final int TENTA = 6;
     /**
      * idEsci : codice univoco
      * per il comando /esci.
      */
-    private static final int idEsci = 7;
+    private static final int IDESCI = 7;
     /**
      * incorretto : codice univoco
      * per indicare un comando
      * invalido.
      */
-    private static final int incorretto = -1;
+    private static final int INCORRETTO = -1;
 
     /**
      * costruttore della classe.
@@ -104,30 +104,30 @@ public class Comando implements Cloneable {
         switch (comando) {
 
             case "/nuova":
-                esito = idNuova;
+                esito = IDNUOVA;
             break;
             case "/mostra":
-                esito = idMostra;
+                esito = IDMOSTRA;
             break;
             case "/help":
-                esito = idHelp;
+                esito = IDHELP;
             break;
             case "/gioca":
-                esito = idGioca;
+                esito = IDGIOCA;
                 break;
             case "/abbandona":
-                esito = idAbbandona;
+                esito = IDABBANDONA;
             break;
             case "/esci":
-                esito = idEsci;
+                esito = IDESCI;
             break;
             default:
-            esito = incorretto;
+            esito = INCORRETTO;
             break;
         }
 
         if (controlloComando[0] != '/') {
-            esito = tenta;
+            esito = TENTA;
         }
         return esito;
     }
