@@ -39,7 +39,8 @@ public final class App {
             String rispostaUtente;
             boolean partitaInCorso = false; // non è in corso
             int checkComando = 0;
-
+            String parola;
+            
             System.out.println("\n\nBENVENUTI IN WORDLE!");
             while (checkComando != idEsci) {
                 System.out.println("Inserisci comando...\n");
@@ -52,6 +53,7 @@ public final class App {
                             if (!controllo.
                                     controlloParola(comandoCorrente[1])) {
                             paroliere.impostaParola(comandoCorrente[1]);
+                            paroliere.impostaParola(comandoCorrente[1].toLowerCase());
                             } else {
                                 System.out.println("Reinserire la parola\n");
                                 }
@@ -121,9 +123,10 @@ public final class App {
                                                 paroliere.
                                                         getParolaParoliere().
                                                         toCharArray();
+                                                parola = comandoCorrente[0].
+                                                toLowerCase();
                                         char[] parolaGiocatore =
-                                                comandoCorrente[0].
-                                                        toCharArray();
+                                                parola.toCharArray();
                                         giocatore.incrTentativi();
 
                                         controllo.
