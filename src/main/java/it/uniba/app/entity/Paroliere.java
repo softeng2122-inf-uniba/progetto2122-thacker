@@ -6,7 +6,7 @@ public class Paroliere extends Utente {
     /**
      * parola_Paroliere : parola da indovinare.
      */
-    private String parola_Paroliere;
+    private String parolaParoliere;
     /**
      * oggetto controllo.
      */
@@ -23,24 +23,24 @@ public class Paroliere extends Utente {
     /**
      * costruttore.
      * @param id : id del paroliere
-     * @param par_Paroliere : parola segreta da indovinare
+     * @param parParoliere : parola segreta da indovinare
      */
-    public Paroliere(final int id, final String par_Paroliere) {
+    public Paroliere(final int id, final String parParoliere) {
         super(id);
-        this.parola_Paroliere = par_Paroliere;
+        this.parolaParoliere = parParoliere;
     }
 
     /**
      * costruttore.
      * @param id : id  del paroliere
-     * @param par_Paroliere : parola segreta da indovinare
+     * @param parParoliere : parola segreta da indovinare
      * @param username : username del paroliere
      */
     public Paroliere(final int id,
-                     final String par_Paroliere,
+                     final String parParoliere,
                      final String username) {
         super(username, id);
-        this.parola_Paroliere = par_Paroliere;
+        this.parolaParoliere = parParoliere;
     }
 
     /**
@@ -48,8 +48,8 @@ public class Paroliere extends Utente {
      * del paroliere.
      * @return : parola del paroliere
      */
-    public final String getParola_Paroliere() {
-        return parola_Paroliere;
+    public final String getParolaParoliere() {
+        return parolaParoliere;
     }
 
     /**
@@ -74,9 +74,9 @@ public class Paroliere extends Utente {
      * imposta la
      * parola del
      * paroliere.
-     * @param par_Paroliere : parola segreta inserita dal paroliere
+     * @param parParoliere : parola segreta inserita dal paroliere
      */
-    public final void impostaParola(final String par_Paroliere) {
-        this.parola_Paroliere = par_Paroliere;
+    public final void impostaParola(final String parParoliere) {
+        this.parolaParoliere = parParoliere;
     }
 }
