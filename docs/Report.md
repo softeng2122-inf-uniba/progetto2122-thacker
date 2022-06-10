@@ -66,6 +66,12 @@ Dopo aver eseguito il comando docker pull copiandolo da GitHub Packages, Il coma
 docker run --rm -it ghcr.io/softeng2122-inf-uniba/wordle-base2122:latest 
 dove base2122 sarà sostitituito con il nome del gruppo. 
 
+# 4. System Design
+
+Il system design non è stato descritto in modo dettagliato in quanto il nostro progetto è di piccole dimensioni, ma è stato fatto il diagramma dei pacchetti.
+
+![Pacchetti](./img/Pacchetti.jpg)
+
 # 5. OO Design
 
 Dopo un’attenta analisi dei requisiti funzionali, abbiamo trovato le seguenti classi: 
@@ -119,3 +125,43 @@ La realizzazione dell'interfaccia grafica è stata fatta in riga di comando ed �
         * Non sono presenti pattern progettuali che utilizzano le interfacce.
     * **Dependency Inversion Principle**:
         * Tale principio viene rispsettato, in quanto la classe *Utente* non dipende dalle sue sottoclassi, ossia *Giocatore* e *Paroliere*, ma il viceversa.
+
+
+# 6. Riepilogo casi di test
+
+Sono stati effettuati i test sulle classi:  
+
+   1. **Controllo**: in particolare sono stati testati i metodi:  
+        *  **controlloParola**: in questo caso si è testato il comportamento del Software con l'inserimento di parole non valide (parole troppo lunghe, parole troppo lunghe o parola nulla) e parole valide.
+
+        *  **controllaParola**: in questo caso si è testato il comportamento del software quando vengono inserite parole contenenti numeri o caratteri speciali.
+
+        *  **controlloLettera**: in questo caso si è testato il comportamento del software per verificare se una lettera all'interno della parola inserita dal giocatore è presente o meno all'interno della parola inserita dal paroliere. 
+
+   2. **Comando**: in particolare è stato testato il seguente metodo:
+        *  **controlloComando**: in questo caso si è testato il comportamento del software durante l'inserimento di un comando erratto, di un comando giusto o il tentativo per indovinare la parola.
+
+In tutti i casi i test sono andati a buon fine. 
+
+![Tabella](./img/Tabella_coveralls.jpg)
+
+# 7. Manuale utente
+
+Questa guida è rivolta a tutti coloro che vogliono cimentarsi nel nostro gioco, ispirato a **WORDLE**. In seguito verranno descritti i comandi necessari per interagire con il gioco.  
+
+   1. **/GIOCA**: Con questo comando l'utente avrà la possibilità di avviare una nuova partita. Verrà visualizzata la matrice dei tentativi vuota. A questo punto il gioco si prepara a ricevere il tentativo oppure un nuovo comando. 
+   2. **/NUOVA <_PAROLA_>**: Con questo comando il paroliere potrà inserire la nuova parola che l'utente dovrà indovinare. 
+   3. **<_PAROLA_>**: Questo comando serve all'utente per tentare di indovinare la parola segreta impostata dal paroliere. La parola inserita dovrà contenere solo lettere e deve essere composta da 5 caratteri, altrimenti verrà visualizzato un messaggio di errore. 
+   4. **/MOSTRA**: Con questo comando è possibile visualizzare la parola segreta inserita dal paroliere.
+   5. **/ABBANDONA**:Con questo comando, previa conferma, l'utente avrà la possibilità di abbandonare la partita corrente. 
+   6. **/ESCI**: Con questo comando avviene la chiusura del gioco. 
+
+# 8. Processo di sviluppo e organizzazione del lavoro
+
+Lo sviluppo del progetto è avvenuto seguendo i principi dello sviluppo agile. Per ogni sprint, e per tutta la sua durata ,si sono effettuati degli incontri giornalieri dalle 15.00 alle 19.00 sia in presenza e sia in modalità online tramite la piattaforma Teams. Per lavorare in modalità condivisa abbiamo utilizzato **Github**, per lo sviluppo del codice **Visual Studio Code** e come linguaggio di programmazione **Java**. 
+
+# 9. Analisi retrospettiva 
+Quì di seguito viene mostrata la tabella relativa all'analisi retrospettiva.
+
+
+![Tabella](./img/Whiteboard.jpg)
